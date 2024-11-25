@@ -57,7 +57,8 @@ CREATE TABLE `Sales_Contracts` (
     `isFinanced` BOOLEAN NOT NULL,   -- Whether the sale is financed (TRUE/FALSE)
     `Loan_Term` INT NOT NULL,        -- Loan term in months (0 for non-financed sales)
     `Total_Price` DECIMAL(10, 2) NOT NULL, -- Total price of the contract, with up to 2 decimal places
-    PRIMARY KEY (`VIN`)              -- VIN as the primary key to ensure uniqueness
+	`Sale_Date` DATE NOT NULL,
+   PRIMARY KEY (`VIN`)              -- VIN as the primary key to ensure uniqueness
 );
 
 
