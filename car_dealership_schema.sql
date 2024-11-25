@@ -51,4 +51,13 @@ CREATE TABLE `Inventory` (
     FOREIGN KEY (`DealershipID`) REFERENCES `Dealerships`(`DealershipID`)
 );
 
+-- Create the Sales_Contracts table
+CREATE TABLE `Sales_Contracts` (
+    `VIN` INT NOT NULL,              -- Vehicle Identification Number, a unique integer
+    `isFinanced` BOOLEAN NOT NULL,   -- Whether the sale is financed (TRUE/FALSE)
+    `Loan_Term` INT NOT NULL,        -- Loan term in months (0 for non-financed sales)
+    `Total_Price` DECIMAL(10, 2) NOT NULL, -- Total price of the contract, with up to 2 decimal places
+    PRIMARY KEY (`VIN`)              -- VIN as the primary key to ensure uniqueness
+);
+
 
