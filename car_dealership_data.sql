@@ -56,13 +56,13 @@ INSERT INTO Inventory (`DealershipID`, `VIN`) VALUES
 TRUNCATE TABLE Sales_Contracts;
 
 -- Insert data into the "Sales_Contracts" table
-INSERT INTO Sales_Contracts (`VIN`, `isFinanced`, `Loan_Term`, `Total_Price`) VALUES
-(16431, TRUE, 36, 18000.00),
-(14001, TRUE, 48, 38000.00),
-(15601, FALSE, 0, 55000.00),
-(22001, TRUE, 24, 25000.00),
-(39021, FALSE, 0, 30000.00),
-(43301, TRUE, 60, 48000.00);
+INSERT INTO Sales_Contracts (`VIN`, `isFinanced`, `Loan_Term`, `Total_Price`, `Sale_Date`) VALUES
+(16431, TRUE, 36, 18000.00, '2024-01-15'),
+(14001, TRUE, 48, 38000.00, '2024-02-20'),
+(15601, FALSE, 0, 55000.00, '2024-03-10'),
+(22001, TRUE, 24, 25000.00, '2024-03-25'),
+(39021, FALSE, 0, 30000.00, '2024-04-05'),
+(43301, TRUE, 60, 48000.00, '2024-05-15');
 
 -- Re-enable foreign key checks
 SET FOREIGN_KEY_CHECKS = 1;
